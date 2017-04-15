@@ -1,0 +1,182 @@
+html, body{
+  font-family: 'Montserrat', sans-serif;
+  font-size:16px;
+  font-weight:300;
+  line-height:1.4;
+}
+
+.container{
+  max-width:1280px;
+  margin:0 auto;
+}
+
+.flex{
+  display:flex;
+}
+
+/* -------------------- header -------------------*/
+
+header{
+  background-color: #ffffff;
+  display:block;
+  width:100%;
+  position:fixed;
+}
+
+.navigation{
+  display:flex;
+  align-items: center;
+  height:64px;
+}
+
+.logo{
+  display:flex;
+  flex-grow:1;
+  align-items: center;
+  margin-left:24px;
+}
+
+.logo img{
+  height:48px;
+  margin-right:6px;
+}
+
+.logo span{
+  font-size:1.4rem;
+  color:#999999;
+}
+
+.logo span .colmar{
+  color: #000000;
+}
+
+nav ul li{
+  display:inline-block;
+  padding-right:16px;
+}
+
+nav a{
+  text-decoration: none;
+  color:#999999;
+}
+
+/* -------------------- banner -------------------*/
+
+#banner{
+  background-color:#eeeeee;
+  padding-top:64px;
+}
+
+#banner .flex{
+  align-items: center;
+}
+
+.left{
+  width:60%;
+  padding:32px 24px;
+}
+
+.left img{
+  width:100%;
+}
+.right{
+  width:423px;
+  padding-left:16px;
+  padding-right:32px;
+}
+
+.right h1{
+  font-size:2.5rem;
+  font-weight:500;
+  color:#666666;
+}
+
+.right h4{
+  font-size:1.4rem;
+  margin-top:1rem;
+  color:#666666;
+}
+
+.start-here{
+  display:block;
+  width:80%;
+  text-decoration: none;
+  color:white;
+  background-color:#666666;
+  padding:8px 0;
+  text-align:center;
+  margin-top:1.5rem;
+  font-size:1.2rem;
+}
+
+/* -------------------- featured -------------------*/
+
+
+.smallcards{
+  width:423px;
+  display:flex;
+  flex-direction:column;
+  border-left:1px solid #eeeeee;
+  padding-top:16px;
+  padding-bottom:16px;
+  padding-right:32px;
+}
+
+.smallcard{
+  display:flex;
+  align-items: center;
+}
+
+.smallcard img{
+  width:35%;
+  height:auto;
+  padding:16px;
+}
+
+h2{
+  margin-top:32px;
+  font-size:1.8rem;
+  font-weight:500;
+}
+
+p.writer{
+  color:#222222;
+
+}
+
+p{
+  font-size:0.88rem;
+  color:#666666;
+  line-height:1.6;
+  margin-top:24px;
+}
+
+.smallcard h3{
+  font-size:1.4rem;
+  font-weight:500;
+  color:#666666;
+}
+
+.smallcard p{
+  margin:0;
+}
+
+.card{
+  display:block;
+  text-decoration: none;
+  font-size:0.88rem;
+  color:skyblue;
+  margin-top:24px;
+}
+
+.smallcard:hover{
+  background-color:#ebebeb;
+}
+
+/* -------------------- learn -------------------*/
+
+/* -------------------- thesis -------------------*/
+
+/* -------------------- footer -------------------*/
+
+/* -------------------- Media queries -------------------*/
