@@ -23,10 +23,14 @@ header{
   position:fixed;
 }
 
-.navigation{
+.desktop-navigation{
   display:flex;
   align-items: center;
   height:64px;
+}
+
+.mobile-navigation{
+  display:none;
 }
 
 .logo{
@@ -65,6 +69,7 @@ nav a{
 #banner{
   background-color:#eeeeee;
   padding-top:64px;
+  width:100%;
 }
 
 #banner .flex{
@@ -79,52 +84,57 @@ nav a{
 .left img{
   width:100%;
 }
+
 .right{
-  width:423px;
+  flex:0 0 423px;
+}
+
+.right div{
   padding-left:16px;
-  padding-right:32px;
+  width:80%;
 }
 
 .right h1{
-  font-size:2.5rem;
+  font-size:2.2rem;
   font-weight:500;
   color:#555555;
+  line-height: 2.6rem;
 }
 
 .right h4{
-  font-size:1.4rem;
+  font-size:1.2rem;
   margin-top:1rem;
   color:#555555;
 }
 
 .start-here{
   display:block;
-  width:80%;
+  width:90%;
   text-decoration: none;
   color:white;
   background-color:#555555;
   padding:8px 0;
   text-align:center;
-  margin-top:1.5rem;
-  font-size:1.2rem;
+  margin-top:1.2rem;
+  font-size:1.1rem;
 }
 
 /* -------------------- featured -------------------*/
 
 
 .smallcards{
-  width:423px;
+  flex:0 0 423px;
   display:flex;
   flex-direction:column;
-  border-left:1px solid #eeeeee;
   padding-top:16px;
   padding-bottom:16px;
-  padding-right:32px;
+  border-left: 1px solid #eeeeee;
 }
 
 .smallcard{
   display:flex;
   align-items: center;
+  padding-right:16px;
 }
 
 .smallcard img{
@@ -133,12 +143,16 @@ nav a{
   padding:16px;
 }
 
+.mobile-image{
+  display:none;
+}
+
 h2{
-  font-size:2rem;
+  font-size:1.8rem;
   font-weight:500;
   color:#555555;
-  padding:0;
-  margin-top:32px;
+  padding-top:32px;
+  margin-top:0px;
 }
 
 p.writer{
@@ -147,16 +161,15 @@ p.writer{
 }
 
 p{
-  font-size:0.9rem;
+  font-size:0.85rem;
   color:#999999;
   line-height:1.6;
-  margin-top:24px;
-  margin-bottom:0;
-  padding-bottom:0;
+  margin-top:20px;
+  margin-bottom:20px;
 }
 
 h3{
-  font-size:1.4rem;
+  font-size:1.2rem;
   font-weight:500;
   color:#555555;
   padding:0;
@@ -191,6 +204,7 @@ h3{
 #learn h2{
   padding-bottom: 16px;
   margin:0;
+  padding-top:0;
 }
 
 .flex.bigcards{
@@ -222,7 +236,7 @@ h3{
 /* -------------------- thesis -------------------*/
 
 #thesis{
-  padding:32px 0;
+  padding-top:32px;
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -270,3 +284,180 @@ footer a{
 }
 
 /* -------------------- Media queries -------------------*/
+
+@media only screen and (max-width:960px){
+  .right h1{
+    font-size:1.8rem;
+    line-height: 2.2rem;
+  }
+
+  .right h4{
+    font-size:1rem;
+    margin-top:0.8rem;
+  }
+
+  .start-here{
+    margin-top:1rem;
+    font-size:0.9rem;
+  }
+
+  .right{
+    flex:0 0 360px;
+  }
+
+  .smallcards{
+    flex:0 0 360px;
+  }
+
+  h2{
+    font-size:1.5rem;
+    padding-top:16px;
+  }
+
+
+  .card{
+    margin-top:12px;
+  }
+
+}
+
+@media only screen and (max-width:664px){
+
+  .desktop-navigation{
+    display:none;
+  }
+
+  .mobile-navigation{
+    display:flex;
+    align-items: center;
+    height:64px;
+    justify-content: space-around;
+  }
+
+  #banner .flex{
+    flex-wrap:wrap;
+  }
+
+  #banner .left{
+    width:100%;
+    height:180px;
+    padding:0;
+    overflow-y: auto;
+  }
+
+  .right{
+    flex:0 1 100%;
+    margin: 32px 16px 32px 16px;
+  }
+
+  .right div{
+    padding-left:0px;
+    width:100%;
+  }
+
+  .start-here{
+    width:100%;
+  }
+
+  #featured .left{
+    display:none;
+  }
+
+  .desktop-image{
+    display:none;
+  }
+
+  .mobile-image{
+    display:inline;
+  }
+
+  .smallcards{
+    flex:0 1 100%;
+    padding:0px;
+    margin-top:16px;
+    margin-bottom:16px;
+    border-left: none;
+  }
+
+  .smallcard{
+    display:flex;
+    flex-direction:column;
+    align-items: flex-start;
+    padding:0 0 16px 0;
+    margin:0 16px 16px 16px;
+  }
+
+  .smallcard img{
+    width:100%;
+    height:auto;
+    padding:0;
+  }
+
+  .smallcard div{
+    margin-left:16px;
+    margin-top:16px;
+  }
+
+  #learn{
+    background-color: #ffffff;
+    border-top:1px solid #eeeeee;
+    border-bottom:1px solid #eeeeee;
+  }
+
+  .flex.bigcards{
+    flex-wrap:none;
+    justify-content: center;
+  }
+
+  .bigcard{
+    background-color: white;
+    width:100%;
+    margin:8px 16px;
+  }
+
+  .bigcard img{
+    display:none;
+  }
+
+  .bigcard div{
+    background-color:#eeeeee;
+    text-align: left;
+    padding:16px 32px 16px 16px;
+  }
+
+  .bigcard p{
+    display:none;
+  }
+
+  #thesis .smallcards{
+    display:none;
+  }
+
+  #thesis h3, p{
+    display: none;
+  }
+
+  #thesis .left{
+    width:100%;
+    padding:0;
+    margin-bottom:24px;
+  }
+
+  footer div{
+    display:none;
+  }
+
+  footer span{
+    padding:16px 0;
+  }
+
+  footer{
+    border-top:none;
+    height:auto;
+    align-items: center;
+    padding-bottom:0;
+    padding-left:24px;
+    padding-right:24px;
+  }
+
+}
