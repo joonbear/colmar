@@ -443,6 +443,10 @@ footer a{
     margin-bottom:24px;
   }
 
+  .left video{
+    margin-top:32px;
+  }
+
   footer div{
     display:none;
   }
