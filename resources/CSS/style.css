@@ -40,8 +40,13 @@ header{
   margin-left:24px;
 }
 
+.logo a{
+  display:flex;
+  align-items: center;
+}
+
 .logo img{
-  height:48px;
+  height:40px;
   margin-right:6px;
 }
 
@@ -67,7 +72,7 @@ nav a{
 /* -------------------- banner -------------------*/
 
 #banner{
-  background-color:#eeeeee;
+  background-color:#f3f3f3;
   padding-top:64px;
   width:100%;
 }
@@ -117,6 +122,13 @@ nav a{
   text-align:center;
   margin-top:1.2rem;
   font-size:1.1rem;
+  transition-property:background-color;
+  transition-duration:0.2s;
+  transition-timing-function: ease-in;
+}
+
+.start-here:hover{
+  background-color:#222222;
 }
 
 /* -------------------- featured -------------------*/
@@ -135,6 +147,12 @@ nav a{
   display:flex;
   align-items: center;
   padding-right:16px;
+  transition-property:background-color;
+  transition-duration: 0.25s;
+}
+
+.smallcard:hover{
+  background-color:#ebebeb;
 }
 
 .smallcard img{
@@ -188,17 +206,19 @@ h3{
   margin-top:24px;
 }
 
-.smallcard:hover{
-  background-color:#ebebeb;
-}
+
 
 /* -------------------- learn -------------------*/
 #learn{
-  background-color: #eeeeee;
+  background-color: #f3f3f3;
   padding:32px 0;
   display:flex;
   flex-direction: column;
   align-items: center;
+}
+
+.bigcard a{
+  text-decoration: none;
 }
 
 #learn h2{
@@ -216,6 +236,21 @@ h3{
   background-color: white;
   width:300px;
   margin:16px;
+  transition-property:background-color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in;
+}
+
+.bigcard:hover{
+  background-color:#444444;
+}
+
+.bigcard:hover p{
+  color:#ffffff;
+}
+
+.bigcard:hover h3{
+  color:#ffffff;
 }
 
 .bigcard img{
@@ -231,6 +266,15 @@ h3{
 .bigcard p{
   padding-top:8px;
   margin:0;
+  transition-property: color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in;
+}
+
+.bigcard h3{
+  transition-property: color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in;
 }
 
 /* -------------------- thesis -------------------*/
@@ -410,7 +454,7 @@ footer a{
   }
 
   .bigcard{
-    background-color: white;
+    background-color: #eeeeee;
     width:100%;
     margin:8px 16px;
   }
@@ -420,7 +464,6 @@ footer a{
   }
 
   .bigcard div{
-    background-color:#eeeeee;
     text-align: left;
     padding:16px 32px 16px 16px;
   }
